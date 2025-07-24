@@ -38,8 +38,8 @@ async function bootstrap() {
   app.useGlobalFilters(new HttpExceptionFilter());
 
   const options = new DocumentBuilder()
-    .setTitle('HNG Boilerplate')
-    .setDescription('API Doc from team Starlight')
+    .setTitle('Nest API')
+    .setDescription('Nest API Doc')
     .setVersion('1.0')
     .addBearerAuth()
     .build();
