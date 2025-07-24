@@ -51,7 +51,7 @@ async function bootstrap() {
     res.json(document);
   });
 
-  const port = app.get<ConfigService>(ConfigService).get<number>('server.port');
+  const port = app.get<ConfigService>(ConfigService).get<number>('server.port') || 6000;
   await app.listen(port);
 
   logger.log({ message: 'server started 🚀', port, url: `http://localhost:${port}/api/v1` });
